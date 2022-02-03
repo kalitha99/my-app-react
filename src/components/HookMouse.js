@@ -13,6 +13,13 @@ function HookMouse() {
     useEffect(() =>{
         console.log('useEffect called')
         window.addEventListener('mousemove', logMousePosition)
+
+        return () => {
+            console.log('cpmponent unmounted')
+            window.removeEventListener('mousemove', logMousePosition)
+
+        }
+
     },[])
     
     return ( 
