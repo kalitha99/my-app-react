@@ -1,19 +1,26 @@
-import logo from './logo.svg';
-import ClassCounter from './components/ClassCounter'; 
-import HookCounter from './components/HookCounter';
-import HookCounterTwo from './components/HookCounterTwo';
-import HookCounterThree from './components/HookCounterThree';
-import './App.css';
-import HookCounterFour from './components/HookCounterFour';
 
+import React from 'react';
+import './App.css';
+
+import ComponentC from './ComponentC';
+import ComponentE from './ComponentE';
+
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
 function App() {
   return (
-<div className="App">
-     {/*<ClassCounter/>*/}
-     {/*<HookCounter/>*/}
-     {/*<HookCounterTwo/>*/}
-     {/*<HookCounterThree/>*/}
-     <HookCounterFour/>
+    <div className="App">
+      {/*<ClassCounter/>*/}
+      {/*<HookCounter/>*/}
+      {/*<HookCounterTwo/>*/}
+      {/*<HookCounterThree/>*/}
+      <UserContext.Provider value={'username'}>
+        <ChannelContext.Provider value={'c12'}>
+          <ComponentE />
+        </ChannelContext.Provider>
+
+      </UserContext.Provider>
+
     </div>
   );
 }
