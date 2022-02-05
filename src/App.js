@@ -1,23 +1,22 @@
 import logo from './logo.svg';
+import ClassCounter from './components/ClassCounter';
+import ClassCounterOne from './components/ClassCounterOne';
+import HookCounter from './components/HookCounter';
+import HookCounterTwo from './components/HookCounterTwo';
+import HookCounterThree from './components/HookCounterThree';
 import './App.css';
+import HookCounterFour from './components/HookCounterFour';
+import HookCounterFive from './components/HookCounterFive';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<div className="App">
+     {/*<ClassCounter/>*/}
+     {/*<HookCounter/>*/}
+     {/*<HookCounterTwo/>*/}
+     {/*<HookCounterThree/>*/}
+     {/*<ClassCounterOne/>*/}
+     <HookCounterFive/>
     </div>
   );
 }
