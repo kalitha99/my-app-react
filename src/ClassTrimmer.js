@@ -10,13 +10,19 @@ class ClassTrimmer extends Component {
     }
 
     componentDidMount(){
-        this.
+        this.interval=setInterval(()=>{
+            this.setInterval(prevState => ({timer:prevState.timer+1}))
+        },1000)
+    }
+
+    componentWillMount(){
+        clearInterval(this.interval)
     }
     
     render() { 
         return ( 
             <div>
-
+                class timer - {this.state.timer}
             </div>
          );
     }
