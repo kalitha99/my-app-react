@@ -1,0 +1,40 @@
+import React, { useState,useMemo } from 'react';
+
+
+
+function Counter() {
+    const [counterOne, setConterOne] = useState(0)
+    const [counterTwo, setConterTwo] = useState(0)
+
+    const incrementOne = () => {
+        setConterOne(counterOne + 1)
+    }
+
+    const incrementTwo = () => {
+        setConterTwo(counterTwo + 1)
+    }
+
+    const isEven =     useMemo(()=>{
+
+        
+            let i=0
+            while (i<2000000000) i++
+            return counterOne%2 ===0
+        
+        
+    },[counterOne])
+    return (
+        <div>
+            <div>
+                <button onClick={incrementOne}>Count one - {counterOne}</button>
+                <span>{isEven ? 'Even':'odd'}</span>
+            </div>
+            <div>
+                <button onClick={incrementTwo}>Count two - {counterTwo}</button>
+                {/*<span>{isEven(counterTwo)? 'Even':'odd'}</span>*/}
+            </div>
+        </div>
+    );
+}
+
+export default Counter;
